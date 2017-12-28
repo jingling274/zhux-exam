@@ -1,0 +1,14 @@
+<h1>职工信息系统：</h1>
+<button (click)="sortUsers('asc')">正序</button>
+<button (click)="sortUsers('desc')" >倒序</button>
+<button (click)="sortUsers('random')">随机</button>
+<button (click)="addNewUser()">新增职工</button>
+<ul>
+    <div id="sytle1">
+    <li *ngFor="let user of users">      
+        <span (click)="deleteUserByID(user.id)">
+          <div id="sytle2">[删除职工]</div>
+        </span> SID:{{user.sid}}，姓名：{{user.name}}，英文名：{{user.ename}}，工龄：{{user.years}}
+    </li>
+    </div>
+  </ul>
