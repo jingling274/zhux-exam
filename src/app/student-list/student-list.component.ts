@@ -66,7 +66,7 @@ export class StudentListComponent implements OnInit {
   }
   deleteUserByID(id){
     this.users.forEach((user,index,arr)=>{
-      if(user.sid==sid){
+      if(user.sid==id){
         arr.splice(index,1);
       }
     })
